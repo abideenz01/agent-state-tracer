@@ -1,0 +1,18 @@
+processors:
+  tail_sampling:
+    decision_wait: 30s
+    num_traces: 50000
+    policies:
+      - name: keep-errors
+        type: status_code
+        status_code:
+          status_codes: [ERROR]
+      - name: keep-agent-hints
+        type: string_attribute
+        string_attribute:
+          key: agent_state.sample_hint
+          values: ["error", "divergent", "rare_path"]
+      - name: baseline-sample
+        type: probabilistic
+        probabilistic:
+          sampling_percentage: 5.0

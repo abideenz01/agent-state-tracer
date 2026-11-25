@@ -1,0 +1,102 @@
+{
+  "complete_traces": 118,
+  "distinct_paths": 15,
+  "fork_causes": {
+    "model": 1,
+    "model,prompt_version": 2,
+    "sampling": 8,
+    "tool:search_kb": 2,
+    "unrecorded": 1
+  },
+  "forks": 14,
+  "incomplete_traces": 2,
+  "inputs_with_more_than_one_path": 10,
+  "inputs_with_repeats": 30,
+  "integrity_issues": {
+    "broken_chain": 1,
+    "no_root": 1,
+    "path_mismatch": 1,
+    "step_gap": 1
+  },
+  "least_stable_inputs": [
+    {
+      "entropy_bits": 1.0,
+      "paths": 2,
+      "run_key": "ticket-0015",
+      "runs": 4
+    },
+    {
+      "entropy_bits": 1.0,
+      "paths": 2,
+      "run_key": "ticket-0016",
+      "runs": 4
+    },
+    {
+      "entropy_bits": 1.0,
+      "paths": 2,
+      "run_key": "ticket-0019",
+      "runs": 4
+    },
+    {
+      "entropy_bits": 1.0,
+      "paths": 2,
+      "run_key": "ticket-0020",
+      "runs": 4
+    },
+    {
+      "entropy_bits": 0.918,
+      "paths": 2,
+      "run_key": "ticket-0007",
+      "runs": 3
+    }
+  ],
+  "mean_path_entropy_bits": 0.299,
+  "outcomes": {
+    "ok": 118
+  },
+  "top_fork_points": [
+    {
+      "runs": 2,
+      "split": "CALL_TOOL: RETRIEVE vs ANSWER"
+    },
+    {
+      "runs": 2,
+      "split": "PLAN: ANSWER vs RETRIEVE"
+    },
+    {
+      "runs": 2,
+      "split": "PLAN: RETRIEVE vs ANSWER"
+    },
+    {
+      "runs": 1,
+      "split": "CALL_TOOL: ANSWER vs RETRIEVE"
+    },
+    {
+      "runs": 1,
+      "split": "RETRIEVE: REFLECT vs ASK_USER"
+    }
+  ],
+  "top_paths": [
+    {
+      "path": "PLAN>RETRIEVE>ANSWER",
+      "runs": 27
+    },
+    {
+      "path": "PLAN>ANSWER",
+      "runs": 19
+    },
+    {
+      "path": "PLAN>CALL_TOOL>RETRIEVE>ANSWER",
+      "runs": 15
+    },
+    {
+      "path": "PLAN>CALL_TOOL>ANSWER",
+      "runs": 14
+    },
+    {
+      "path": "PLAN>RETRIEVE>REFLECT>ANSWER",
+      "runs": 8
+    }
+  ],
+  "traces": 120
+}

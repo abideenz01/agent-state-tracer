@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-state-tracer"
+version = "0.1.0"
+description = "Trace agent state transitions with OpenTelemetry and explain why runs of the same input take different paths."
+requires-python = ">=3.10"
+dependencies = ["opentelemetry-api>=1.30,<2", "opentelemetry-sdk>=1.30,<2"]
+
+[project.optional-dependencies]
+otlp = ["opentelemetry-exporter-otlp-proto-http>=1.30,<2"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+agent-state-tracer = "agent_state_tracer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
